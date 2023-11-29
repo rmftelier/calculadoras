@@ -3,8 +3,12 @@
 2. Exibir o resultado na tela
 */
 
-/* Depois colocar a validação para que não seja possível clicar
-no botão quando o input estiver vazio */
+/* mudanças necessárias:
+1. preciso fazer algo para que o botão fique desativado quando os inputs estiverem vazios
+
+*/
+
+const button = document.querySelector(".buttonCalc");
 
 const num1soma = document.querySelector("#numero1Soma");
 const num2soma = document.querySelector("#numero2Soma");
@@ -18,6 +22,7 @@ const num2mult = document.querySelector("#numero2Mult");
 const num1div = document.querySelector("#numero1Div");
 const num2div = document.querySelector("#numero2Div");
 
+//
 function somar() {
   const valor1 = parseInt(num1soma.value);
   const valor2 = parseInt(num2soma.value);

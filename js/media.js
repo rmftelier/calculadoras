@@ -12,6 +12,14 @@
       "Hoje é seu aniversário? Pq você ta de parabéns! 10 de média"
 */
 
+/* mudanças: 
+
+1. preciso fazer com que o input só receba notas positivas
+2. preciso fazer com que após o primeiro cálculo de média o input seja excluído
+3. preciso fazer algo para que o botão fique desativado quando os inputs estiverem vazios
+
+*/
+
 const nota1 = document.getElementById("nota1");
 const nota2 = document.getElementById("nota2");
 const nota3 = document.getElementById("nota3");
@@ -40,7 +48,7 @@ function calcularMedia() {
     resultado.innerHTML = `Você está na média com ${media}`;
   } else if (media >= 7.1 && media <= 9.9) {
     resultado.innerHTML = `Notão! Sua média é ${media}!`;
-  } else {
+  } else if (media === 10.0) {
     resultado.innerHTML =
       "Hoje é seu aniversário? Porque você está de parabéns! 10 na média!";
   }
