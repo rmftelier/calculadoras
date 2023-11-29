@@ -11,6 +11,23 @@
     6. Se a nota for entre 10, mostre na tela: 
       "Hoje é seu aniversário? Pq você ta de parabéns! 10 de média"
 */
-function calcularMedia() {
 
+const nota1 = document.getElementById("nota1");
+const nota2 = document.getElementById("nota2");
+const nota3 = document.getElementById("nota3");
+const nota4 = document.getElementById("nota4");
+
+const caixaResultado = document.querySelector("#caixaResultado");
+
+function calcularMedia() {
+  const valor1 = parseInt(nota1.value);
+  const valor2 = parseInt(nota2.value);
+  const valor3 = parseInt(nota3.value);
+  const valor4 = parseInt(nota4.value);
+
+  const media = (valor1 + valor2 + valor3 + valor4) / 4;
+
+  let resultado = document.createElement("p");
+  caixaResultado.appendChild(resultado);
+  resultado.innerHTML = `o resultado de ${valor1} + ${valor2} + ${valor3} + ${valor4} dividido por 4 é: ${media}`;
 }
