@@ -26,8 +26,22 @@ function calcularMedia() {
   const valor4 = parseInt(nota4.value);
 
   const media = (valor1 + valor2 + valor3 + valor4) / 4;
-
+  console.log(media);
   let resultado = document.createElement("p");
   caixaResultado.appendChild(resultado);
-  resultado.innerHTML = `o resultado de ${valor1} + ${valor2} + ${valor3} + ${valor4} dividido por 4 é: ${media}`;
+
+  if (media === 0) {
+    resultado.innerHTML = "Infelizmente você zerou a prova :(";
+  } else if (media >= 0.1 && media <= 3) {
+    resultado.innerHTML = `Caramba, deu ruim, você obteve média ${media}! Estude mais e tente novamente!`;
+  } else if (media >= 3.1 && media <= 5.9) {
+    resultado.innerHTML = `Você obteve média ${media}! Falta pouco para a média.`;
+  } else if (media >= 6 && media <= 7.0) {
+    resultado.innerHTML = `Você está na média com ${media}`;
+  } else if (media >= 7.1 && media <= 9.9) {
+    resultado.innerHTML = `Notão! Sua média é ${media}!`;
+  } else {
+    resultado.innerHTML =
+      "Hoje é seu aniversário? Porque você está de parabéns! 10 na média!";
+  }
 }
