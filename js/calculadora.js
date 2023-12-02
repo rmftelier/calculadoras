@@ -24,8 +24,8 @@ const num2div = document.querySelector("#numero2Div");
 
 //
 function somar() {
-  const valor1 = parseInt(num1soma.value);
-  const valor2 = parseInt(num2soma.value);
+  const valor1 = parseFloat(num1soma.value);
+  const valor2 = parseFloat(num2soma.value);
 
   let resultado = valor1 + valor2;
 
@@ -34,8 +34,8 @@ function somar() {
 }
 
 function subtrair() {
-  const valor1 = parseInt(num1sub.value);
-  const valor2 = parseInt(num2sub.value);
+  const valor1 = parseFloat(num1sub.value);
+  const valor2 = parseFloat(num2sub.value);
 
   let resultado = valor1 - valor2;
 
@@ -49,8 +49,14 @@ function multiplicar() {
 
   let resultado = valor1 * valor2;
 
-  document.querySelectorAll(".resultado")[2].innerHTML =
-    "Resultado: " + resultado;
+  const paragrafo = document.querySelectorAll(".resultado")[2]
+  const negrito = document.createElement('strong');
+  paragrafo.appendChild(negrito);
+  negrito.innerText = resultado;
+
+  /*document.querySelectorAll(".resultado")[2].innerHTML =
+    paragrafo + ` <strong>${resultado}</strong>`;
+    */
 }
 
 function dividir() {
