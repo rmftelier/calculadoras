@@ -36,7 +36,7 @@ section {
   border: solid #000000;
   border-radius: 5px;
   margin-bottom: 30px;
-  width: 48%;
+  width: 50%;
   background-color: #f7f4f4;
 }
 
@@ -50,7 +50,6 @@ button {
 #projeto2 {
   padding: 10px 20px;
   line-height: auto;
-  justify-content: space-between;
 }
 
 #formulario {
@@ -84,7 +83,7 @@ button {
 
 .nota {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .inputCalc {
@@ -96,7 +95,6 @@ button {
 .buttonCalc {
   width: 110px;
   border-radius: 5px;
-
 }
 
 .resultado {
@@ -109,6 +107,7 @@ button {
   border-radius: 5px;
 }
 
+/* Responsividade */
 @media screen and (max-width: 950px) {
   #content {
     justify-content: space-between;
@@ -118,10 +117,27 @@ button {
   #projeto1,
   #projeto2 {
     height: 100%;
-    width: 100%;
+    width: 80%;
   }
 
   .buttonCalc {
     margin-top: 5px;
+  }
+
+  #notas {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .inputCalc {
+    margin-bottom: 5px;
+  }
+
+  #btnSituacao {
+    width: 100%;
+  }
+
+  .nota label {
+    padding-right: 10px;
   }
 }
