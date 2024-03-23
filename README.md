@@ -1,2 +1,0 @@
-# calculadoras
-🖥️ Projeto Final - JavaScript
